@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../../constant.dart';
 import '../../../../../core/utils/app_styles.dart';
 
-class CustomTextButton extends StatelessWidget {
-  const CustomTextButton(
+class CustomContainerButton extends StatelessWidget {
+  const CustomContainerButton(
       {super.key, required this.title, this.onTap, this.height});
   final String title;
   final void Function()? onTap;

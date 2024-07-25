@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_app/core/utils/assets.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage({super.key});
@@ -10,7 +11,7 @@ class CustomBookImage extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 2.6 / 4,
         child: Image.asset(
-          'assets/images/image1.jpeg',
+          Assets.image,
           fit: BoxFit.fill,
         ),
       ),

@@ -23,6 +23,7 @@ class HomeListViewItem extends StatelessWidget {
         onDismissed: (direction) {
           book.delete();
           BlocProvider.of<BookCubit>(context).fatchAllBooks();
+
           showSnakBar(context, 'The note has been successfully deleted');
         },
         child: SizedBox(
@@ -62,7 +63,7 @@ class HomeListViewItem extends StatelessWidget {
                     const SizedBox(
                       height: 8,
                     ),
-                    CustomTextButton(
+                    CustomContainerButton(
                       title: "Brrowers Books",
                       onTap: () {
                         GoRouter.of(context)
@@ -72,7 +73,7 @@ class HomeListViewItem extends StatelessWidget {
                     const SizedBox(
                       height: 15,
                     ),
-                    CustomTextButton(
+                    CustomContainerButton(
                       title: "Return Books",
                       onTap: () {
                         GoRouter.of(context)

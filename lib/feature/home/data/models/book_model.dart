@@ -12,13 +12,12 @@ class BookModel extends HiveObject {
   @HiveField(3)
   final String versionNumber;
   // @HiveField(4)
-  // final String firstNumberBook;
+  // String firstNumberBook;
 
   BookModel({
     required this.bookName,
     required this.autherName,
     required this.numberBooks,
     required this.versionNumber,
-    // required this.firstNumberBook,
   });
 }

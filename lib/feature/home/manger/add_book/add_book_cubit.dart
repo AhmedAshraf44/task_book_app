@@ -7,9 +7,9 @@ import '../../data/models/book_model.dart';
 
 class AddBookCubit extends Cubit<AddBookStates> {
   AddBookCubit() : super(AddBookinitialState());
-  int numberBooks = 0;
+  // int? numberBooks;
   getBook(BookModel book) async {
-    book.numberBooks = numberBooks.toString();
+    // book.numberBooks = numberBooks.toString();
 
     emit(AddBookLoadingState());
     try {

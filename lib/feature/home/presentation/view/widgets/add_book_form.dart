@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task_app/core/functions/build_number_books.dart';
 import 'package:task_app/feature/home/data/models/book_model.dart';
 import 'package:task_app/feature/home/manger/add_book/add_book_cubit.dart';
 import 'package:task_app/feature/home/presentation/view/widgets/custom_button.dart';
@@ -77,9 +78,11 @@ class _AddBookFormState extends State<AddBookForm> {
                     autherName: autherName!,
                     numberBooks: numberBooks!,
                     versionNumber: versionNumber!,
-                    //firstNumberBook: numberBooks ?? '0',
                   );
                   BlocProvider.of<AddBookCubit>(context).getBook(book);
+                  setNumberBooks(int.parse(numberBooks!));
+                  // BlocProvider.of<AddBookCubit>(context).firstNumberBook =
+                  //     int.parse(numberBooks!);
                 } else {
                   autovalidateMode = AutovalidateMode.always;
                   setState(() {});
